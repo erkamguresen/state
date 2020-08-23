@@ -8,12 +8,12 @@
   <script src='../../../app/lib/deep-clone.js'></script>
 
   <script id='data'>
-    const state = {
+    const initialState = {
       isOpen: false,
       summaryText: '',
       mainText: '',
     };
-    const initialState = deepClone(state);
+    let state = deepClone(initialState);
     const appLog = [{
       initialState
     }];
@@ -73,7 +73,7 @@
       appLog.push(logEntry);
 
       // reset state
-      Object.assign(state, initialState);
+      state = deepClone(initialState);
       // log state
       logEntry.state = deepClone(state);
 
