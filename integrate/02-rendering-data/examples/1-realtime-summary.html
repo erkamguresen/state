@@ -13,7 +13,7 @@
       summaryText: '',
       mainText: '',
     };
-    const initialState = { ...state };
+    const initialState = deepClone(state);
     const appLog = [{
       initialState
     }];
