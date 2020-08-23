@@ -61,6 +61,13 @@ State/Log/Render are not bound to JavaScript. They are more general concepts. An
   - Render data into DOM elements
   - Re-render portions of the DOM for a reactive experience
 
+### Project Planning
+
+- Using a _backlog_ to set priorities
+- Writing _acceptance criteria_ to describe user stories
+- Creating a user-story dependency chart to plan your development schedule
+- Breaking user stories into code-able tasks
+
 [TOP](#state)
 
 ---

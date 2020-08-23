@@ -12,8 +12,11 @@
       isOpen: false,
       summaryText: '',
       mainText: '',
-    }
-    const appLog = [];
+    };
+    const initialState = { ...state };
+    const appLog = [{
+      initialState
+    }];
   </script>
 
   <script id='views'>
@@ -62,10 +65,18 @@
       // log new view rendered from state
       logEntry.view = newDetailsEl;
     };
-  </script>
 
-  <script id='init'>
-    window.onload = () => {
+    const initHandler = () => {
+      const logEntry = {
+        action: 'init',
+      };
+      appLog.push(logEntry);
+
+      // reset state
+      Object.assign(state, initialState);
+      // log state
+      logEntry.state = deepClone(state);
+
       // render the initial state
       const root = document.getElementById('root');
       while (root.firstChild) {
@@ -73,12 +84,14 @@
       }
       const newDetailsEl = renderDetails(state);
       root.appendChild(newDetailsEl);
+      // log the view
+      logEntry.view = newDetailsEl;
 
-      appLog.push({
-        state: deepClone(state),
-        view: newDetailsEl
-      });
-    }
+    };
+  </script>
+
+  <script id='init'>
+    window.onload = initHandler;
   </script>
 </head>
 
@@ -91,6 +104,8 @@
       <label>summary text: <input type='text' name='summaryText' /></label> <br>
       <label>main text: <input type='text' name='mainText' /></label>
     </form>
+    <br>
+    <button id='reset-button'>reset</button>
     <hr>
     <div id='root'></div>
   </section>
@@ -98,6 +113,9 @@
   <script id='listeners'>
     document.getElementById('update-component-form')
       .addEventListener('input', updateComponentHandler);
+
+    document.getElementById('reset-button')
+      .addEventListener('click', initHandler);
 
     document.getElementById('root')
       .addEventListener('click', (e) => e.preventDefault());
