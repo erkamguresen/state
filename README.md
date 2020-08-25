@@ -249,6 +249,7 @@ Screen recordings of class.  Coaches, when sending your PR's with links please .
 1. [Listener vs. Handler & Quiz Refactor pt. 1](https://vimeo.com/451213285)
 1. [Quiz Refactor pt. 2](https://vimeo.com/451213479)
 1. [Quiz Refactor pt. 3](https://vimeo.com/451213762)
-   - [Quiz Refactor Repo](https://github.com/HackYourFutureBelgium/refactor-code-explained-quiz)
+    - [Quiz Refactor Repo](https://github.com/HackYourFutureBelgium/refactor-code-explained-quiz)
+    - [Another quiz refactor](https://github.com/HackYourFutureBelgium/refator-simple-steps-quiz)
 
 [TOP](#state)
