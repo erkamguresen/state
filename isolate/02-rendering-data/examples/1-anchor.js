@@ -1,6 +1,6 @@
 'use strict';
 
-const expect = chai.expect;
+const expect = require('chai').expect;
 
 /**
  * renders an anchor element with given text & URL

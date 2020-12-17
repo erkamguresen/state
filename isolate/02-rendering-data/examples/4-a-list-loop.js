@@ -1,6 +1,6 @@
 'use strict';
 
-const expect = chai.expect;
+const expect = require('chai').expect;
 
 /**
  * renders an array of strings into an ordered list

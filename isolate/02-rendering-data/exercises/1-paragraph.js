@@ -1,6 +1,6 @@
 'use strict';
 
-const expect = chai.expect;
+const expect = require('chai').expect;
 
 /**
  * render a paragraph with optional styling

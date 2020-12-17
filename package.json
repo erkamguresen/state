@@ -1,22 +1,23 @@
 {
-  "name": "testing",
+  "name": "state",
   "version": "1.0.0",
-  "description": "the testing module for HYF Belgium",
-  "main": "server.js",
-  "scripts": {
-    "register-isolate": "node isolate/register.js",
-    "register-integrate": "node integrate/register.js",
-    "register": "npm run register-isolate && npm run register-integrate",
-    "start": "npm run register && node server.js"
-  },
+  "description": "when you learn to build applications around their data",
+  "type": "module",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/HackYourFutureBelgium/testing.git"
+    "url": "git+https://github.com/HackYourFutureBelgium/state.git"
   },
-  "author": "",
-  "license": "SEE LICENSE IN LICENSE.md",
+  "author": "HackYourFutureBelgium",
+  "license": "MIT",
   "bugs": {
-    "url": "https://github.com/HackYourFutureBelgium/testing/issues"
+    "url": "https://github.com/HackYourFutureBelgium/state/issues"
   },
-  "homepage": "https://github.com/HackYourFutureBelgium/testing#readme"
+  "homepage": "https://github.com/HackYourFutureBelgium/state#readme",
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "mocha": "^8.2.1"
+  },
+  "dependencies": {
+    "jsdom": "^16.4.0"
+  }
 }

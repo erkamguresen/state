@@ -1,6 +1,6 @@
 'use strict';
 
-const expect = chai.expect;
+const expect = require('chai').expect;
 
 /**
  * render a drop-down info element

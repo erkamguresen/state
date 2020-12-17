@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>List Component</title>
+    <style></style>
+  </head>
+
+  <body>
+    <section id="user-interface">
+      <input id="word" type="text" value="" /> <br />
+      <button id="push-button">push</button>
+      <button id="unshift-button">unshift</button>
+      <hr />
+      <div id="all-words"></div>
+    </section>
+
+    <script id="data">
+      'use strict';
+      const words = [];
+      console.log('initial words:', [...words]);
+    </script>
+
+    <script id="views">
+      'use strict';
+
+      const wordsList = array => {
+        const ul = document.createElement('ul');
+        for (let string of array) {
+          const li = document.createElement('li');
+          li.innerHTML = string;
+          ul.appendChild(li);
+        }
+        return ul;
+      };
+
+      // removed tests for readability
+      // see step 2 for view tests
+    </script>
+
+    <script id="handlers">
+      'use strict';
+
+      const pushWordHandler = () => {
+        debugger;
+        // read input from DOM
+        const newWord = document.getElementById('word').value;
+        // update state
+        words.push(newWord);
+        // render state
+        const wordsComponent = wordsList(words);
+        // update UI
+        const wordsContainer = document.getElementById('all-words');
+        wordsContainer.innerHTML = '';
+        wordsContainer.appendChild(wordsComponent);
+        // log interaction
+        console.log('push:', newWord, [...words]);
+      };
+
+      const unshiftWordHandler = () => {
+        debugger;
+        // read user input
+        const newWord = document.getElementById('word').value;
+        // update state
+        words.unshift(newWord);
+        // render state
+        const wordsComponent = wordsList(words);
+        // update UI
+        const wordsContainer = document.getElementById('all-words');
+        wordsContainer.innerHTML = '';
+        wordsContainer.appendChild(wordsComponent);
+        // log interaction
+        console.log('unshift:', newWord, [...words]);
+      };
+    </script>
+
+    <script id="listeners">
+      'use strict';
+
+      document
+        .getElementById('push-button')
+        .addEventListener('click', pushWordHandler);
+      document
+        .getElementById('unshift-button')
+        .addEventListener('click', unshiftWordHandler);
+    </script>
+  </body>
+</html>

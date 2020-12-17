@@ -1,6 +1,6 @@
 'use strict';
 
-const expect = chai.expect;
+const expect = require('chai').expect;
 
 /**
  * renders a table from a 2D array of arrays
@@ -9,7 +9,7 @@ const expect = chai.expect;
  * @returns {HTMLTableElement} the rendered game board
  */
 const renderGameBoard = (arrOfArrs) => {
- 
+
 };
 
 

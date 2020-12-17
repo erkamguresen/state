@@ -14,7 +14,7 @@
 
 */
 
-const expect = chai.expect;
+const expect = require('chai').expect;
 
 describe('deepClone: creates a deep clone of common JS data types', () => {
   describe('deepClone: copies primitive types', () => {

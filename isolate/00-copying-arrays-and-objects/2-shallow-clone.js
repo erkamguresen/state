@@ -12,7 +12,7 @@
 
 */
 
-const expect = chai.expect;
+const expect = require('chai').expect;
 
 const obj = {
   a: [true],

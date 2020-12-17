@@ -1,9 +1,0 @@
-{
-  "title": "state/isolate",
-  "path": "/",
-  "loopGuard": {
-    "active": false,
-    "max": 20
-  },
-  "buttons": []
-}
