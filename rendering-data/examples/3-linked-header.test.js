@@ -48,8 +48,8 @@ describe('linkedHeader: renders an anchor inside a heading', () => {
       it('has target: "_blank" (default)', () => {
         expect(actualChild).to.have.property('target', '_blank');
       });
-      it('has text: "google it"', () => {
-        expect(actualChild).to.have.text('google it');
+      it('has innerHTML: "google it"', () => {
+        expect(actualChild.innerHTML).to.equal('google it');
       });
       it('has childElementCount: 0', () => {
         expect(actualChild).to.have.property('childElementCount', 0);
@@ -80,8 +80,8 @@ describe('linkedHeader: renders an anchor inside a heading', () => {
       it('has target: "_self"', () => {
         expect(actualChild).to.have.property('target', '_self');
       });
-      it('has text: "badger x 3"', () => {
-        expect(actualChild).to.have.text('badger x 3');
+      it('has innerHTML: "badger x 3"', () => {
+        expect(actualChild.innerHTML).to.equal('badger x 3');
       });
       it('has childElementCount: 0', () => {
         expect(actualChild).to.have.property('childElementCount', 0);

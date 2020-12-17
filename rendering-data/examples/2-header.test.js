@@ -25,8 +25,8 @@ describe('renderHeader: renders DOM headers of different levels', () => {
     it('has tagName "H3"', () => {
       expect(actual).to.have.property('tagName', 'H3');
     });
-    it('has text: "hello"', () => {
-      expect(actual).to.have.text('hello');
+    it('has innerHTML: "hello"', () => {
+      expect(actual.innerHTML).to.equal('hello');
     });
     it('has childElementCount: 0', () => {
       expect(actual).to.have.property('childElementCount', 0);
@@ -38,8 +38,8 @@ describe('renderHeader: renders DOM headers of different levels', () => {
     it('has tagName "H1"', () => {
       expect(actual).to.have.property('tagName', 'H1');
     });
-    it('has text: "good bye"', () => {
-      expect(actual).to.have.text('good bye');
+    it('has innerHTML: "good bye"', () => {
+      expect(actual.innerHTML).to.equal('good bye');
     });
     it('has childElementCount: 0', () => {
       expect(actual).to.have.property('childElementCount', 0);
@@ -49,11 +49,17 @@ describe('renderHeader: renders DOM headers of different levels', () => {
   describe('does not allow invalid header levels', () => {
     it('throws an error if level is less than 1', () => {
       const shouldThrow = () => renderHeader(0, 'oops!');
-      expect(shouldThrow).to.throw(RangeError, 'level must be in range: 1 -> 6');
+      expect(shouldThrow).to.throw(
+        RangeError,
+        'level must be in range: 1 -> 6'
+      );
     });
     it('throws an error if level is greater than 6', () => {
       const shouldThrow = () => renderHeader(7, 'oops!');
-      expect(shouldThrow).to.throw(RangeError, 'level must be in range: 1 -> 6');
+      expect(shouldThrow).to.throw(
+        RangeError,
+        'level must be in range: 1 -> 6'
+      );
     });
   });
 });

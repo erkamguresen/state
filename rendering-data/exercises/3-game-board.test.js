@@ -1,6 +1,6 @@
-'use strict';
+"use strict";
 
-const expect = require('chai').expect;
+const expect = require("chai").expect;
 
 /**
  * renders a table from a 2D array of arrays
@@ -8,52 +8,46 @@ const expect = require('chai').expect;
  * @param {Array[]} arrOfArrs - a 2D array representing the game board
  * @returns {HTMLTableElement} the rendered game board
  */
-const renderGameBoard = (arrOfArrs) => {
+const renderGameBoard = (arrOfArrs) => {};
 
-};
-
-
-describe('renderGameBoard: renders a list of user screen names and real names', () => {
-
-  describe('tictactoe: X won on the middle column', () => {
+describe("renderGameBoard: renders a list of user screen names and real names", () => {
+  describe("tictactoe: X won on the middle column", () => {
     const boardData = [
-      ['O', 'X', 'X'],
-      ['X', 'X', 'O'],
-      ['O', 'X', 'O'],
+      ["O", "X", "X"],
+      ["X", "X", "O"],
+      ["O", "X", "O"],
     ];
     const actual = renderGameBoard(boardData);
 
     testGameBoard(actual, boardData);
   });
 
-  describe('empty mancala board', () => {
+  describe("empty mancala board", () => {
     const boardData = [
-      ['', ''],
-      ['', ''],
-      ['', ''],
-      ['', ''],
-      ['', ''],
-      ['', ''],
+      ["", ""],
+      ["", ""],
+      ["", ""],
+      ["", ""],
+      ["", ""],
+      ["", ""],
     ];
     const actual = renderGameBoard(boardData);
 
     testGameBoard(actual, boardData);
   });
 
-  describe('Play Ball!', () => {
+  describe("Play Ball!", () => {
     const boardData = [
-      ['p', 'l', 'a', 'y'],
-      ['b', 'a', 'l', 'l'],
+      ["p", "l", "a", "y"],
+      ["b", "a", "l", "l"],
     ];
     const actual = renderGameBoard(boardData);
 
     testGameBoard(actual, boardData);
   });
-
 });
 
-
-
+// prettier-ignore
 function testGameBoard(actual, boardData) {
   it('has tagName: "TABLE"', () => {
     expect(actual).to.have.property('tagName', 'TABLE');
@@ -78,10 +72,10 @@ function testGameBoard(actual, boardData) {
           const filler = row[j];
           const actualChildChild = actualChild.children[j];
           it('has tagName: "TD"', () => {
-            expect(actualChildChild).to.have.property('tagName', 'TD');
+            expect(actualChildChild.tagName).to.equal( 'TD');
           });
-          it(`has text: "${filler}"`, () => {
-            expect(actualChildChild).to.have.text(filler);
+          it(`has innerText: "${filler}"`, () => {
+            expect(actualChildChild.innerText).to.equal(filler);
           });
           it(`has childElementCount: 0`, () => {
             expect(actualChildChild).to.have.property('childElementCount', 0);

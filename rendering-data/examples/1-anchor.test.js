@@ -21,15 +21,14 @@ const renderAnchor = (text, url, target = '_blank') => {
 };
 
 describe('renderAnchor: renders a DOM anchor element', () => {
-
   describe('open google in a new tab (default target)', () => {
     const actual = renderAnchor('google it', 'https://www.google.com/');
 
     it('has tagName: "A"', () => {
       expect(actual).to.have.property('tagName', 'A');
     });
-    it('has text: "google it"', () => {
-      expect(actual).to.have.text('google it');
+    it('has innerHTML: "google it"', () => {
+      expect(actual.innerHTML).to.equal('google it');
     });
     it('has href: "https://www.google.com/"', () => {
       expect(actual).to.have.property('href', 'https://www.google.com/');
@@ -44,16 +43,23 @@ describe('renderAnchor: renders a DOM anchor element', () => {
   });
 
   describe('open a pre-defined search in a new tab', () => {
-    const actual = renderAnchor('lmgtfy', 'https://lmgtfy.com/?q=let+me+google+that+for+you&s=d', '_blank');
+    const actual = renderAnchor(
+      'lmgtfy',
+      'https://lmgtfy.com/?q=let+me+google+that+for+you&s=d',
+      '_blank'
+    );
 
     it('has tagName: "A"', () => {
       expect(actual).to.have.property('tagName', 'A');
     });
-    it('has text: "lmgtfy"', () => {
-      expect(actual).to.have.text('lmgtfy');
+    it('has innerHTML: "lmgtfy"', () => {
+      expect(actual.innerHTML).to.equal('lmgtfy');
     });
     it('has href: "https://lmgtfy.com/?q=let+me+google+that+for+you&s=d"', () => {
-      expect(actual).to.have.property('href', 'https://lmgtfy.com/?q=let+me+google+that+for+you&s=d');
+      expect(actual).to.have.property(
+        'href',
+        'https://lmgtfy.com/?q=let+me+google+that+for+you&s=d'
+      );
     });
     it('has target: "_blank"', () => {
       expect(actual).to.have.property('target', '_blank');
@@ -65,16 +71,23 @@ describe('renderAnchor: renders a DOM anchor element', () => {
   });
 
   describe('redirect to the HYF promo clip', () => {
-    const actual = renderAnchor('HYF Belgium', 'https://www.youtube.com/watch?v=oHg5SJYRHA0', '_self');
+    const actual = renderAnchor(
+      'HYF Belgium',
+      'https://www.youtube.com/watch?v=oHg5SJYRHA0',
+      '_self'
+    );
 
     it('has tagName: "A"', () => {
       expect(actual).to.have.property('tagName', 'A');
     });
-    it('has text: "HYF Belgium"', () => {
-      expect(actual).to.have.text('HYF Belgium');
+    it('has innerHTML: "HYF Belgium"', () => {
+      expect(actual.innerHTML).to.equal('HYF Belgium');
     });
     it('has href: "https://www.youtube.com/watch?v=oHg5SJYRHA0"', () => {
-      expect(actual).to.have.property('href', 'https://www.youtube.com/watch?v=oHg5SJYRHA0');
+      expect(actual).to.have.property(
+        'href',
+        'https://www.youtube.com/watch?v=oHg5SJYRHA0'
+      );
     });
     it('has target: "_self"', () => {
       expect(actual).to.have.property('target', '_self');
