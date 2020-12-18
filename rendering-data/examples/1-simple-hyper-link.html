@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+
+    <title></title>
+    <meta name="description" content="Rendering Data" />
+
+    <link href="../style.css" rel="stylesheet" />
+
+    <script id="challenge">
+      const challengeName = 'simple hyper link';
+
+      // your render function
+      const solution = obj => {
+        const aElement = document.createElement('a');
+        aElement.innerHTML = 'learn about ' + obj.text;
+        aElement.href = obj.link;
+        aElement.target = '_blank';
+        return aElement;
+      };
+
+      // arrays of arguments to test your component
+      const testCases = [
+        [
+          {
+            text: 'cats',
+            link: 'https://thecatsite.com/',
+          },
+        ],
+        [
+          {
+            text: 'goats',
+            link: 'https://www.goat.com/',
+          },
+        ],
+        [
+          {
+            text: 'badgers',
+            link: 'https://www.badgerbadgerbadger.com/',
+          },
+        ],
+      ];
+
+      // obfuscated solution for rendering expected elements
+      const a0_0x2393 = ['_blank', 'href', 'link', 'target', 'innerHTML'];
+      (function(_0x261186, _0x2393be) {
+        const _0x4ce27c = function(_0xacaaa8) {
+          while (--_0xacaaa8) {
+            _0x261186['push'](_0x261186['shift']());
+          }
+        };
+        _0x4ce27c(++_0x2393be);
+      })(a0_0x2393, 0x104);
+      const a0_0x4ce2 = function(_0x261186, _0x2393be) {
+        _0x261186 = _0x261186 - 0x0;
+        let _0x4ce27c = a0_0x2393[_0x261186];
+        return _0x4ce27c;
+      };
+      const reference = _0x58cc3b => {
+        const _0x48f248 = document['createElement']('a');
+        return (
+          (_0x48f248[a0_0x4ce2('0x4')] =
+            'learn\x20about\x20' + _0x58cc3b['text']),
+          (_0x48f248[a0_0x4ce2('0x1')] = _0x58cc3b[a0_0x4ce2('0x2')]),
+          (_0x48f248[a0_0x4ce2('0x3')] = a0_0x4ce2('0x0')),
+          _0x48f248
+        );
+      };
+    </script>
+  </head>
+
+  <body>
+    <div class="header">
+      <h2 id="challenge-name"></h2>
+      <div class="side-by-side">
+        <h3>actual</h3>
+        <h3>expected</h3>
+      </div>
+    </div>
+
+    <main id="test-cases"></main>
+
+    <script src="../../lib/describe-it.js"></script>
+    <script src="../../lib/chai-and-chai-dom.js"></script>
+    <script src="../../lib/run-test-cases.js"></script>
+  </body>
+</html>

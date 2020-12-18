@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+
+    <title></title>
+    <meta name="description" content="Rendering Data" />
+
+    <link href="../style.css" rel="stylesheet" />
+
+    <script id="challenge">
+      const challengeName = 'study links';
+
+      // your render function
+      const solution = linksData => {
+        const divEl = document.createElement('_');
+
+        const h3El = document.createElement('_');
+        h3El.textContent = _;
+        divEl.appendChild(h3El);
+
+        const ulEl = document.createElement('_');
+        for (const key in _) {
+          const liEl = document.createElement('_');
+
+          const aEl = document.createElement('_');
+          aEl.textContent = key;
+          aEl.href = linksData.links[_];
+          aEl.target = '_blank';
+          _.appendChild(_);
+
+          _.appendChild(_);
+        }
+        _.appendChild(_);
+
+        return divEl;
+      };
+
+      // arrays of arguments to test your component
+      const testCases = [
+        [
+          {
+            topic: 'the dom',
+            links: {
+              'js.info': 'https://javascript.info/document',
+              MDN:
+                'https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Introduction',
+              'HYF Ams':
+                'https://github.com/HackYourFuture/JavaScript2/blob/master/Week1/README.md',
+              'HYF Be': 'https://hackyourfuture.be/inspecting-the-dom',
+            },
+          },
+        ],
+        [
+          {
+            topic: 'baking cookies',
+            links: {
+              WikiHow: 'https://www.wikihow.life/Bake-Cookies',
+              'DuckDuck Search':
+                'https://duckduckgo.com/?q=baking+cookies&t=ffab&atb=v189-1&ia=recipes',
+              'in your car': 'https://www.youtube.com/watch?v=X0lgg_qKaqw',
+            },
+          },
+        ],
+      ];
+
+      // obfuscated solution for rendering expected elements
+      const a0_0x32ad = [
+        'div',
+        'textContent',
+        'createElement',
+        'target',
+        'topic',
+        'href',
+        'appendChild',
+        'links',
+      ];
+      (function(_0x1e2552, _0x32adfb) {
+        const _0x503bc6 = function(_0x15b328) {
+          while (--_0x15b328) {
+            _0x1e2552['push'](_0x1e2552['shift']());
+          }
+        };
+        _0x503bc6(++_0x32adfb);
+      })(a0_0x32ad, 0xe2);
+      const a0_0x503b = function(_0x1e2552, _0x32adfb) {
+        _0x1e2552 = _0x1e2552 - 0x0;
+        let _0x503bc6 = a0_0x32ad[_0x1e2552];
+        return _0x503bc6;
+      };
+      const reference = _0x5d078f => {
+        const _0x3acf12 = document[a0_0x503b('0x0')](a0_0x503b('0x6')),
+          _0x55defe = document[a0_0x503b('0x0')]('h3');
+        (_0x55defe[a0_0x503b('0x7')] = _0x5d078f[a0_0x503b('0x2')]),
+          _0x3acf12[a0_0x503b('0x4')](_0x55defe);
+        const _0x277116 = document[a0_0x503b('0x0')]('ul');
+        for (const _0x417235 in _0x5d078f[a0_0x503b('0x5')]) {
+          const _0x2ae715 = document['createElement']('li'),
+            _0x38dc67 = document[a0_0x503b('0x0')]('a');
+          (_0x38dc67[a0_0x503b('0x7')] = _0x417235),
+            (_0x38dc67[a0_0x503b('0x3')] = _0x5d078f['links'][_0x417235]),
+            (_0x38dc67[a0_0x503b('0x1')] = '_blank'),
+            _0x2ae715[a0_0x503b('0x4')](_0x38dc67),
+            _0x277116[a0_0x503b('0x4')](_0x2ae715);
+        }
+        return _0x3acf12[a0_0x503b('0x4')](_0x277116), _0x3acf12;
+      };
+    </script>
+  </head>
+
+  <body>
+    <div class="header">
+      <h2 id="challenge-name"></h2>
+      <div class="side-by-side">
+        <h3>actual</h3>
+        <h3>expected</h3>
+      </div>
+    </div>
+
+    <main id="test-cases"></main>
+
+    <script src="../../lib/describe-it.js"></script>
+    <script src="../../lib/chai-and-chai-dom.js"></script>
+    <script src="../../lib/run-test-cases.js"></script>
+  </body>
+</html>
