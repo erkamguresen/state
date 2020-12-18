@@ -38,6 +38,7 @@ export const addMeasurementHandler = event => {
   // log action
   logger.add({
     handler: 'add measurement',
+    event,
     newMeasurementStr,
     newMeasurement,
     measurements,

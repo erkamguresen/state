@@ -31,12 +31,6 @@
       console.log('initial state:', JSON.parse(JSON.stringify(numbers)));
     </script>
 
-    <script id="init">
-      'use strict';
-
-      document.getElementById('current-number').innerHTML = numbers.current;
-    </script>
-
     <script id="handlers">
       'use strict';
 
@@ -69,6 +63,12 @@
       document.getElementById('plus-one').addEventListener('click', up);
 
       document.getElementById('minus-one').addEventListener('click', down);
+    </script>
+
+    <script id="init">
+      'use strict';
+
+      document.getElementById('current-number').innerHTML = numbers.current;
     </script>
   </body>
 </html>

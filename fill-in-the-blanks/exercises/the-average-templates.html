@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>the average</title>
+  </head>
+
+  <body>
+    <main id="user interface">
+      <input id="number-input" type="number" value="0" />
+      <button id="add-button">add number to list</button>
+      <br />
+      <button id="reset-button">reset</button>
+      <br />
+      <br />
+      <div id="average"></div>
+      <hr />
+      <ul id="numbers-list"></ul>
+    </main>
+
+    <script id="data">
+      'use strict';
+
+      const state = {
+        numbers: [],
+        average: 0,
+      };
+      console.log('initial state:', {
+        average: state.average,
+        numbers: [...state.numbers],
+      });
+    </script>
+
+    <script id="logic">
+      'use strict';
+
+      // this functions works
+      /**
+       * computes the average of all numbers in an array
+       * if the array has no entries, it returns 0
+       * @param {number[]} arrOfNumbers - an array of numbers to average
+       * @returns {number} the average of all numbers in the array
+       */
+      const average = arrOfNumbers => {
+        if (arrOfNumbers.length === 0) {
+          return 0;
+        }
+        const numberOfNumbers = arrOfNumbers.length;
+        const sum = arrOfNumbers.reduce((sum, next) => sum + next);
+        const average = sum / numberOfNumbers;
+        return average;
+      };
+    </script>
+
+    <script id="views">
+      'use strict';
+      // the views work
+
+      const renderNumberLis = arrOfNumbers => {
+        const addListEntry = (list, next) => {
+          return `${list}\n<li>${next}</li>`;
+        };
+        return arrOfNumbers.reduce(addListEntry, '');
+      };
+
+      const renderAverage = avg => {
+        return `<p>average:</p> <code>${avg}</code>`;
+      };
+    </script>
+
+    <script id="handlers">
+      'use strict';
+
+      const addNumberHandler = () => {
+        // gather user input
+        const inputEl = document.getElementById('number-input');
+        const userInput = Number(inputEl.value);
+
+        // update state
+        state._.push(_);
+        state._ = average(_._);
+
+        // render and append new list
+        const listView = renderNumberLis(_._);
+        document.getElementById('numbers-list').innerHTML = _;
+
+        // render and append new average
+        const averageView = _(_.average);
+        document.getElementById('average').innerHTML = _;
+
+        // log interaction
+        console.log('add number:', userInput, listView, '\n', averageView, {
+          average: state.average,
+          numbers: [...state.numbers],
+        });
+      };
+
+      const resetHandler = () => {
+        // reset state to it's initial values
+        state.numbers = _;
+        state.average = _;
+
+        // reset Ui
+        document.getElementById('_').innerHTML = '';
+        document.getElementById('_').innerHTML = '';
+
+        // log interaction
+        console.log('reset:', listView, averageView, {
+          average: state.average,
+          numbers: [...state.numbers],
+        });
+      };
+    </script>
+
+    <script id="listeners">
+      'use strict';
+      // the listeners are all correct
+      document
+        .getElementById('add-button')
+        .addEventListener('click', addNumberHandler);
+
+      document
+        .getElementById('reset-button')
+        .addEventListener('click', resetHandler);
+    </script>
+  </body>
+</html>

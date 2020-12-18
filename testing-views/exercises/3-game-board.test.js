@@ -1,6 +1,6 @@
-"use strict";
+'use strict';
 
-const expect = require("chai").expect;
+const expect = require('chai').expect;
 
 /**
  * renders a table from a 2D array of arrays
@@ -8,39 +8,32 @@ const expect = require("chai").expect;
  * @param {Array[]} arrOfArrs - a 2D array representing the game board
  * @returns {HTMLTableElement} the rendered game board
  */
-const renderGameBoard = (arrOfArrs) => {};
+const renderGameBoard = arrOfArrs => {};
 
-describe("renderGameBoard: renders a list of user screen names and real names", () => {
-  describe("tictactoe: X won on the middle column", () => {
+describe('renderGameBoard: renders a list of user screen names and real names', () => {
+  describe('tictactoe: X won on the middle column', () => {
+    const boardData = [['O', 'X', 'X'], ['X', 'X', 'O'], ['O', 'X', 'O']];
+    const actual = renderGameBoard(boardData);
+
+    testGameBoard(actual, boardData);
+  });
+
+  describe('empty mancala board', () => {
     const boardData = [
-      ["O", "X", "X"],
-      ["X", "X", "O"],
-      ["O", "X", "O"],
+      ['', ''],
+      ['', ''],
+      ['', ''],
+      ['', ''],
+      ['', ''],
+      ['', ''],
     ];
     const actual = renderGameBoard(boardData);
 
     testGameBoard(actual, boardData);
   });
 
-  describe("empty mancala board", () => {
-    const boardData = [
-      ["", ""],
-      ["", ""],
-      ["", ""],
-      ["", ""],
-      ["", ""],
-      ["", ""],
-    ];
-    const actual = renderGameBoard(boardData);
-
-    testGameBoard(actual, boardData);
-  });
-
-  describe("Play Ball!", () => {
-    const boardData = [
-      ["p", "l", "a", "y"],
-      ["b", "a", "l", "l"],
-    ];
+  describe('Play Ball!', () => {
+    const boardData = [['p', 'l', 'a', 'y'], ['b', 'a', 'l', 'l']];
     const actual = renderGameBoard(boardData);
 
     testGameBoard(actual, boardData);
@@ -81,8 +74,8 @@ function testGameBoard(actual, boardData) {
             expect(actualChildChild).to.have.property('childElementCount', 0);
           });
           console.dir(actualChildChild);
-        }, true);
+        });
       }
-    }, true);
+    });
   }
 }

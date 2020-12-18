@@ -27,23 +27,13 @@
       console.log('initial state:', { ...componentInfo });
     </script>
 
-    <script id="init">
-      'use strict';
-
-      const detailsEl = document.getElementById('component');
-      detailsEl.open = componentInfo.isOpen;
-
-      const summaryEl = detailsEl.children[0];
-      summaryEl.innerHTML = componentInfo.summaryText;
-
-      const pEl = detailsEl.children[1];
-      pEl.innerHTML = componentInfo.mainText;
-    </script>
-
     <script id="handlers">
       'use strict';
 
-      const preventDefaultHandler = event => event.preventDefault();
+      const preventDefaultHandler = event => {
+        event.preventDefault();
+        console.log('prevented default:', event);
+      };
 
       const openCloseHandler = () => {
         debugger;
@@ -68,6 +58,19 @@
       document
         .getElementById('toggle-is-open')
         .addEventListener('change', openCloseHandler);
+    </script>
+
+    <script id="init">
+      'use strict';
+
+      const detailsEl = document.getElementById('component');
+      detailsEl.open = componentInfo.isOpen;
+
+      const summaryEl = detailsEl.children[0];
+      summaryEl.innerHTML = componentInfo.summaryText;
+
+      const pEl = detailsEl.children[1];
+      pEl.innerHTML = componentInfo.mainText;
     </script>
   </body>
 </html>

@@ -41,6 +41,8 @@ export const placeMove = event => {
   // log action
   logger.add({
     handler: 'place move',
+    event,
+    target: event.target,
     index,
     game,
   });

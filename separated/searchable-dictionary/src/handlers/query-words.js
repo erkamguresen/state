@@ -27,6 +27,7 @@ export const queryHandler = event => {
   //  story name, user input, copy of state
   logger.add({
     handler: 'query',
+    event,
     newQuery,
     dictionary,
   });

@@ -25,6 +25,23 @@
       console.log('initial state:', { ...componentInfo });
     </script>
 
+    <script id="handlers">
+      'use strict';
+
+      const preventDefaultHandler = event => {
+        event.preventDefault();
+        console.log('prevented default:', event);
+      };
+    </script>
+
+    <script id="listeners">
+      'use strict';
+
+      document
+        .getElementById('component')
+        .addEventListener('click', preventDefaultHandler);
+    </script>
+
     <script id="init">
       'use strict';
 
@@ -36,20 +53,6 @@
 
       const pEl = detailsEl.children[1];
       pEl.innerHTML = componentInfo.mainText;
-    </script>
-
-    <script id="handlers">
-      'use strict';
-
-      const preventDefaultHandler = event => event.preventDefault();
-    </script>
-
-    <script id="listeners">
-      'use strict';
-
-      document
-        .getElementById('component')
-        .addEventListener('click', preventDefaultHandler);
     </script>
   </body>
 </html>
