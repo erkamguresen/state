@@ -11,7 +11,7 @@
 - [Learning Objectives](#learning-objectives)
 - [About the Projects](#about-the-projects)
 - [Suggested Study](#suggested-study)
-- Sundays
+- Break-Down
   - [Week 1](#week-1)
   - [Week 2](#week-2)
 - [Class Recordings](#class-recordings)
@@ -164,6 +164,8 @@ Helpful links, examples and exercises.
 <summary>expand/collapse</summary>
 <br>
 
+### Coding
+
 - [What is state and why should we care about it?](https://dev.to/codeartistryio/what-is-state-and-why-should-we-care-about-it-4o95)
 - Code in this Repo
   - 🥚 [stepped](./stepped?--defaults) (examples): single-file projects that have been built one step at a time
@@ -172,20 +174,40 @@ Helpful links, examples and exercises.
   - 🐣 [separated](./separated?--defaults) (examples): projects to study that are separated into many folders and files.
   - 🐣 [rendering-data](./rendering-data?--defaults) (exercises): write functions that turn JS data into DOM elements, practice inspecting elements in the DOM and debugger to check your work.
   - 🐥 [testing-views](./testing-views?--defaults) (exercises): learn how to read and pass tests for view functions(tests in this directory must be run in Node.js, they will not work in the browser)
+- More Practice
+  - [javascript-toy\_\_dom-exercises](https://github.com/omahacodeschool/javascript-toy__dom-exercises)
+  - [practice-and-learn-the-dom](https://github.com/tutsplus/practice-javascript-and-learn-the-dom)
+  - [Learn DOM Rendering](https://github.com/oliverjam/learn-dom-rendering)
+  - [Learn Form Validation](https://github.com/oliverjam/learn-form-validation)
+- Working with the DOM
+  - [Traversy DOM Crash Course](https://www.youtube.com/watch?v=0ik6X4DJKCc) - it's long, no need to finish it before Sunday
+  - [JS Dom Tutorials: Accessing The DOM](https://dom-tutorials.appspot.com/static/index.html)
+  - [DOM Tree (js.info)](https://javascript.info/dom-nodes)
+  - [Walking the DOM (js.info)](https://javascript.info/dom-navigation)
+  - [getElement & querySelector (js.info)](https://javascript.info/searching-elements-dom)
 - DOM Elements: Attributes vs. Properties
   - [javascript.info](https://javascript.info/dom-attributes-and-properties)
   - [FullstackTraning](https://blog.fullstacktraining.com/html-attributes-vs-dom-properties/) (article)
   - [WebTunings](https://www.youtube.com/watch?v=9DWKjn969lM) (video)
   - StackOverflow: [the difference](https://stackoverflow.com/questions/6003819/what-is-the-difference-between-properties-and-attributes-in-html), [when to use which](https://stackoverflow.com/questions/3919291/when-to-use-setattribute-vs-attribute-in-javascript)
-- [Learn DOM Rendering](https://github.com/oliverjam/learn-dom-rendering)
-- [Learn Form Validation](https://github.com/oliverjam/learn-form-validation)
 - Nodes vs. Elements
   - [Web Tunings](https://www.youtube.com/watch?v=FrX1bzWc8O4)
   - [StackOverflow](https://stackoverflow.com/questions/9979172/difference-between-node-object-and-element-object)
-- Tutorials to refactor
-  - [Rock Paper Scissors (traversy)](https://www.youtube.com/watch?v=WR_pWXJZiRY)
+
+### Project Scoping
+
+- What is project scope, and how to plan it
+  - [be SMART](https://www.fool.com/the-blueprint/project-scope/)
+  - [6 steps](https://www.potential.com/articles/project-scope/)
+  - [cio.com](https://www.cio.com/article/3542776/what-is-project-scope-defining-and-outlining-project-success.html)
+  - [clickup.com](https://clickup.com/blog/project-scope/)
+- [What about Project Scope Management?](https://www.youtube.com/watch?v=cXAL56knUpE)
+- [Requirements Gathering](https://www.brighthubpm.com/agile/123103-assembling-a-toolbox-for-agile-requirements/)
+- [Scope Creep](https://duckduckgo.com/?q=scope+creep&atb=v214-1&ia=web)
+- [Scope Statement Statement](https://duckduckgo.com/?q=project+scope+statement&atb=v214-1&ia=web)
 
 </details>
+<br>
 
 [TOP](#state)
 
@@ -211,38 +233,45 @@ You will start a two-week group project to build a JavaScript quiz app. We give 
 
 #### Before Break
 
-- [Application State](./isolate/index.html) (examples & exercises)
+Study the [separated](./separated?--defaults) examples together:
+
+- What can a user do with this program?
+- What is the program's data?
+- How does each user story interact with the data?
+- Do the logs help you understand the program?
 
 #### After Break
 
-- [Application State](./integrate/README.md) (examples & exercises)
+Break into groups and begin planning your quiz project!
 
 ### Project
 
 > after class
 
-This week's project is to write a JS Quiz. You'll be given:
+This week's project is to write a JS Quiz. You'll be given [starter code](https://github.com/HackYourFutureBelgium/js-quiz-starter) with:
 
-- [Starter code](https://github.com/HackYourFutureBelgium/state-project-js-quiz)
-- [An initial state](https://github.com/HackYourFutureBelgium/state-project-js-quiz/tree/master/src/data.js)
-- [A list of possible user stories](https://github.com/HackYourFutureBelgium/state-project-js-quiz/tree/master/user-stories.md)
+- a suggested initial state for your quiz
+- a logging tool
+- testing support for `/logic` and `/views`
+- CI for testing & documentation when opening PRs to `master` or `main`
+- an example project in the repo (go ahead and delete the code when you start your project)
 
-The rest is up to you!
+The rest is up to you! Just be careful when _scoping_ your project, it's better have a simple working quiz than a complicated broken one.
 
 #### Checklist
 
 ```md
-- [ ] [repo](https://github.com/_/_) (with a complete README)
+- [ ] [repo](https://github.com/_/_) with a complete README
 - [ ] [live demo](https://_.github.io/_)
-- [ ] [backlog](https://github.com/_/_/tree/master/backlog.md)
-- [ ] [development-strategy](https://github.com/_/_/tree/master/development-strategy.md)
+- [ ] [project-planning](_https://github.com/_/_/tree/master/project-planning)
 - [ ] [A project board](https://github.com/_/_/projects/X)
-- [ ] [One branch per step in `development-strategy.md`](https://github.com/_/_/network)
-- [ ] [One closed issue per task](https://github.com/_/_/issues?q=is%3Aissue+is%3Aclosed) (you can have more than task per development step!)
-- [ ] [One closed PR per task issue](https://github.com/_/__/pulls?q=is%3Apr+is%3Aclosed)
+- [ ] [One issue per task](https://github.com/_/_/issues) (with labels and milestones)
+- [ ] [One branch per issue](https://github.com/_/_/network)
+- [ ] [One reviewed PR per completed issue](https://github.com/_/__/pulls?q=is%3Apr+is%3Aclosed)
 ```
 
 </details>
+<br>
 
 [TOP](#state)
 
@@ -250,34 +279,49 @@ The rest is up to you!
 
 ## Week 2
 
-The focus of week 2 is learning how to render data into DOM elements to create interactive user interfaces.
+The focus of week 2 is completing your group project: in class we will review your progress all together, after class you will complete the JS quiz project.
+
+Remember, completing the project can also mean removing features that you don't have time to build/fix! It's more impressive to have a simple working website than a big broken one.
+
+<details>
+<summary>expand/collapse</summary>
+<br>
 
 ### Prep Work
 
 > before class
 
-- Rendering Data Examples: Isolate & Integrate
-- Nodes vs. Elements
-  - [Web Tunings](https://www.youtube.com/watch?v=FrX1bzWc8O4)
-  - [StackOverflow](https://stackoverflow.com/questions/9979172/difference-between-node-object-and-element-object)
+Prepare at least one difficulty your team had last week that you would like to discuss. Open a new issue in your class repo describing what your team struggled with, be sure to:
 
-### Lesson Plan
+- describe the challenge your team faced
+- link to your project repo
+- use the milestone `state`
+- label it `help-wanted` and `week-2`
+- assign your group members
 
-> during class
+### During Class
 
-#### [Isolate](../isolate/index.html)
+#### Before Break
 
-[2. Rendering Data](./isolate/index.html)
+We will read through all the issues posted by your class then pick one or two to solve as a class. Someone from the selected team(s) will share their screen and we'll resolve the issue all together.
 
-#### [Integrate](../integrate/README.md)
+#### After Break
 
-[2. Rendering Data](./integrate/README.md)
+Break into small groups and make a plan for the next week:
 
-### Project
+- what went well last week? what was challenging?
+- what features should you put aside to finish on time?
+- what can you do better this week?
+- take some time to update your issues, labels, and project board
+
+### After Class
 
 > after class
 
 Finish up the JS Quiz from last week.
+
+</details>
+<br>
 
 [TOP](#state)
 
