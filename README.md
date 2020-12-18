@@ -36,11 +36,11 @@ How to study the code in this repo.
    - `npm install -g study-lenses` (if you do not have it already)
    - `npm update -g study-lenses` (if you already have it installed)
 1. Clone this repository:
-   - `git clone git@github.com:HackYourFutureBelgium/separation-of-concerns.git` (SSH) (recommended)
-   - `git clone https://github.com/HackYourFutureBelgium/separation-of-concerns.git` (HTTPS)
-   - `gh repo clone HackYourFutureBelgium/separation-of-concerns` (GH CLI)
+   - `git clone git@github.com:HackYourFutureBelgium/state.git` (SSH) (recommended)
+   - `git clone https://github.com/HackYourFutureBelgium/state.git` (HTTPS)
+   - `gh repo clone HackYourFutureBelgium/state` (GH CLI)
 1. `cd` into the repository
-   - `cd separation-of-concerns`
+   - `cd state`
 1. Run the `study` command from your CLI
    - `study`
 1. The material will open in your default browser, you're good to go!
