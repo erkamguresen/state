@@ -14,7 +14,7 @@ global.document = document;
 const expect = chai.expect;
 
 describe('wordsList renders an array of strings into an unordered list', () => {
-  describe('an empty array becomes an empyt list', () => {
+  describe('an empty array becomes an empty list', () => {
     const emptyList = wordsList([]);
     it('should be a DOM element', () => {
       expect(emptyList).to.be.instanceOf(Element);
@@ -28,18 +28,18 @@ describe('wordsList renders an array of strings into an unordered list', () => {
   });
 
   describe('it renders a list with "hello!"', () => {
-    const xyzList = wordsList(['hello!']);
+    const helloList = wordsList(['hello!']);
     it('should be a DOM element', () => {
-      expect(xyzList).to.be.instanceOf(Element);
+      expect(helloList).to.be.instanceOf(Element);
     });
     it('should have nodeName "UL"', () => {
-      expect(xyzList.nodeName).to.equal('UL');
+      expect(helloList.nodeName).to.equal('UL');
     });
     it('should have 1 child', () => {
-      expect(xyzList.childElementCount).to.equal(1);
+      expect(helloList.childElementCount).to.equal(1);
     });
     describe('the 1st child', () => {
-      const firstChild = xyzList.children[0];
+      const firstChild = helloList.children[0];
       it('should be a DOM element', () => {
         expect(firstChild).to.be.instanceOf(Element);
       });

@@ -2,6 +2,12 @@
 
 Learn how to render JavaScript data in to DOM elements so your users can interact with your program's state.
 
+<video controls src="./rendering-data-explained.mp4" height='50%' width='50%'>
+
+    Sorry, your browser doesn't support embedded videos.
+
+</video>
+
 ---
 
 ## Some helpful resources

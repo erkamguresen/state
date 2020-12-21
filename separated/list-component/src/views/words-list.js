@@ -1,6 +1,6 @@
 'use strict';
 
-export const wordsList = array => {
+export const wordsList = (array = []) => {
   const ul = document.createElement('ul');
   for (let string of array) {
     const li = document.createElement('li');
