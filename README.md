@@ -359,4 +359,12 @@ Screen recordings of class. Coaches, when sending your PR's with links please ..
 1. [Quiz Refactor pt. 2](https://vimeo.com/451213479)
 1. [Quiz Refactor pt. 3](https://vimeo.com/451213762)
 
+### Classes 9 & 10
+
+[Unmesh](https://github.com/unmeshvrije), [Thibault](https://github.com/ThibaultLesuisse)
+
+- Week 1:
+  - [State, Logging and Rendering](https://vimeo.com/493708942)
+  - [JS Quiz Project](https://vimeo.com/493709184)
+
 [TOP](#state)
