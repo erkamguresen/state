@@ -173,6 +173,7 @@ Helpful links, examples and exercises.
   - 🥚 [refactors](./refactors?--defaults) (exercises): practice refactoring code from a single JS file to separated JS files
   - 🐣 [separated](./separated?--defaults) (examples): projects to study that are separated into many folders and files.
   - 🐣 [rendering-data](./rendering-data?--defaults) (exercises): write functions that turn JS data into DOM elements, practice inspecting elements in the DOM and debugger to check your work.
+  - 🐥 [views-that-listen](./views-that-listen?--defaults) (examples): adding event listeners inside your view functions will help you make more interesting and reactive UIs
   - 🐥 [testing-views](./testing-views?--defaults) (exercises): learn how to read and pass tests for view functions(tests in this directory must be run in Node.js, they will not work in the browser)
 - More Practice
   - [javascript-toy\_\_dom-exercises](https://github.com/omahacodeschool/javascript-toy__dom-exercises)
