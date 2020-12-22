@@ -6,7 +6,9 @@ debugger;
 // log initial state
 import './log-state.js';
 
-// attach event listeners
-import '../listeners/add-word.js';
-import '../listeners/filter-words.js';
+// render initial UI
+import './ui.js';
+
+// attach event listeners/
+import '../listeners/add-stepper.js';
 import '../listeners/reset.js';
