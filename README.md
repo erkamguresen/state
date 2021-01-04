@@ -366,5 +366,9 @@ Screen recordings of class. Coaches, when sending your PR's with links please ..
 - Week 1:
   - [State, Logging and Rendering](https://vimeo.com/493708942)
   - [JS Quiz Project](https://vimeo.com/493709184)
+- Week 2:
+  - [Part 1](https://vimeo.com/495147137)
+  - [Part 2](https://vimeo.com/495162820/a3a9aab641)
+  
 
 [TOP](#state)
