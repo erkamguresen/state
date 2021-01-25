@@ -1,6 +1,7 @@
 {
   "study": {
-    "save": true
+    "save": true,
+    "testExtensions": ["test"]
   },
-  "port": 4008
+  "--port": 4008
 }
