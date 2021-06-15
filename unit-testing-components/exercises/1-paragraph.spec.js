@@ -1,14 +1,4 @@
-'use strict';
-
-/**
- * render a paragraph with optional styling
- * @param {string} text - the paragraph text
- * @param {string[]} [classList=[]] - an array of classes to apply
- * @returns {HTMLParagraphElement} a rendered paragraph element
- */
-const renderParagraph = (text, classList = []) => {
-  // see the last example for a hint
-};
+import { renderParagraph } from './1-paragraph.js';
 
 describe('renderParagraph: renders a paragraph with optional styling', () => {
   describe('"lorem ipsum", no classes', () => {

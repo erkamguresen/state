@@ -1,27 +1,4 @@
-'use strict';
-
-/**
- * renders an array of strings into an ordered list
- * @param {string[]} arr - the array of strings to render
- * @param {number} startNum - starting index for the list
- * @returns {HTMLOListElement} the rendered list
- */
-const renderListReduce = (arr, startNum) => {
-  const renderLi = item => {
-    const liEl = document.createElement('li');
-    liEl.innerText = item;
-    return liEl;
-  };
-  const appendLi = (list, nextLi) => {
-    list.appendChild(nextLi);
-    return list;
-  };
-  const olEl = arr.map(renderLi).reduce(appendLi, document.createElement('ol'));
-
-  olEl.start = startNum;
-
-  return olEl;
-};
+import { renderListReduce } from './4-b-list-reduce.js';
 
 describe('renderListReduce: renders a list from an array of strings', () => {
   describe('a linked button element opening to google', () => {

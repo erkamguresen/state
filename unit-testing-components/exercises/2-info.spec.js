@@ -1,26 +1,4 @@
-'use strict';
-
-/**
- * render a drop-down info element
- * @param {string} caption - the title of this info drop-down
- * @param {string} mainText - the important information
- * @param {string} [id=''] - the element's id
- * @returns {HTMLDetailsElement}
- */
-const renderInfo = (caption, mainText, id = '') => {
-  const detailsEl = document.createElement('_');
-  _;
-
-  const summaryEl = document.createElement('_');
-  _;
-  _;
-
-  const pEl = document.createElement('_');
-  _;
-  _;
-
-  return detailsEl;
-};
+import { renderInfo } from './2-info.js';
 
 describe('renderInfo: renders some info under a caption', () => {
   describe('several colors, no id', () => {
