@@ -1,5 +1,3 @@
-'use strict';
-
 import { addMeasurementHandler } from '../handlers/add.js';
 
 document

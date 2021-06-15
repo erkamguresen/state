@@ -1,7 +1,5 @@
 'use strict';
 
-const expect = require('chai').expect;
-
 /**
  * renders an anchor element with given text & URL
  *  you can optionally configure the target
@@ -25,19 +23,19 @@ describe('renderAnchor: renders a DOM anchor element', () => {
     const actual = renderAnchor('google it', 'https://www.google.com/');
 
     it('has tagName: "A"', () => {
-      expect(actual).to.have.property('tagName', 'A');
+      expect(actual.tagName).toEqual('A');
     });
     it('has innerHTML: "google it"', () => {
-      expect(actual.innerHTML).to.equal('google it');
+      expect(actual.innerHTML).toEqual('google it');
     });
     it('has href: "https://www.google.com/"', () => {
-      expect(actual).to.have.property('href', 'https://www.google.com/');
+      expect(actual.href).toEqual('https://www.google.com/');
     });
     it('has target: "_blank" (default)', () => {
-      expect(actual).to.have.property('target', '_blank');
+      expect(actual.target).toEqual('_blank');
     });
     it('has childElementCount: 0', () => {
-      expect(actual).to.have.property('childElementCount', 0);
+      expect(actual.childElementCount).toEqual(0);
     });
     console.dir(actual);
   });
@@ -50,22 +48,21 @@ describe('renderAnchor: renders a DOM anchor element', () => {
     );
 
     it('has tagName: "A"', () => {
-      expect(actual).to.have.property('tagName', 'A');
+      expect(actual.tagName).toEqual('A');
     });
     it('has innerHTML: "lmgtfy"', () => {
-      expect(actual.innerHTML).to.equal('lmgtfy');
+      expect(actual.innerHTML).toEqual('lmgtfy');
     });
     it('has href: "https://lmgtfy.com/?q=let+me+google+that+for+you&s=d"', () => {
-      expect(actual).to.have.property(
-        'href',
+      expect(actual.href).toEqual(
         'https://lmgtfy.com/?q=let+me+google+that+for+you&s=d'
       );
     });
     it('has target: "_blank"', () => {
-      expect(actual).to.have.property('target', '_blank');
+      expect(actual.target).toEqual('_blank');
     });
     it('has childElementCount: 0', () => {
-      expect(actual).to.have.property('childElementCount', 0);
+      expect(actual.childElementCount).toEqual(0);
     });
     console.dir(actual);
   });
@@ -78,22 +75,21 @@ describe('renderAnchor: renders a DOM anchor element', () => {
     );
 
     it('has tagName: "A"', () => {
-      expect(actual).to.have.property('tagName', 'A');
+      expect(actual.tagName).toEqual('A');
     });
     it('has innerHTML: "HYF Belgium"', () => {
-      expect(actual.innerHTML).to.equal('HYF Belgium');
+      expect(actual.innerHTML).toEqual('HYF Belgium');
     });
     it('has href: "https://www.youtube.com/watch?v=oHg5SJYRHA0"', () => {
-      expect(actual).to.have.property(
-        'href',
+      expect(actual.href).toEqual(
         'https://www.youtube.com/watch?v=oHg5SJYRHA0'
       );
     });
     it('has target: "_self"', () => {
-      expect(actual).to.have.property('target', '_self');
+      expect(actual.target).toEqual('_self');
     });
     it('has childElementCount: 0', () => {
-      expect(actual).to.have.property('childElementCount', 0);
+      expect(actual.childElementCount).toEqual(0);
     });
     console.dir(actual);
   });

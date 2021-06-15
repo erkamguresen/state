@@ -1,6 +1,4 @@
-'use strict';
-
-import { logger } from '../../../../lib/logger.js';
+import { logger } from '../../../lib/logger.js';
 
 import { words } from '../data.js';
 import { wordsList } from '../views/words-list.js';

@@ -1,5 +1,3 @@
-'use strict';
-
 import { summaryTextHandler } from '../handlers/summary-text.js';
 
 document

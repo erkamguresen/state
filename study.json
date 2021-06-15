@@ -1,7 +1,8 @@
 {
   "study": {
+    "eval": true,
     "save": true,
-    "testExtensions": ["test"]
+    "tests": [".spec.js", ".test.js"]
   },
-  "--port": 4008
+  "--port": 4005
 }

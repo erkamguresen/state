@@ -1,5 +1,3 @@
-'use strict';
-
 export const average = arr => {
   if (arr.length === 0) {
     return 0;

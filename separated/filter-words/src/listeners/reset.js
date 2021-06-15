@@ -1,5 +1,3 @@
-'use strict';
-
 import { resetHandler } from '../handlers/reset.js';
 
 // attach handler to DOM with event listener

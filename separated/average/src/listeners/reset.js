@@ -1,5 +1,3 @@
-'use strict';
-
 import { resetMeasurementsHandler } from '../handlers/reset.js';
 
 document

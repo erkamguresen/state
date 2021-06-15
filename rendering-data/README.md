@@ -2,11 +2,10 @@
 
 Learn how to render JavaScript data in to DOM elements so your users can interact with your program's state.
 
-<video controls src="./rendering-data-explained.mp4" height='50%' width='50%'>
+Each numbered folder is a complete example or an exercise.
 
-    Sorry, your browser doesn't support embedded videos.
-
-</video>
+- To test your components or study the examples, open `index.html` in your browser.
+- Write your own solutions in the `actual.js` files. The rest works and is there for testing your solution.
 
 ---
 

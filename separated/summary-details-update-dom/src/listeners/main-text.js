@@ -1,5 +1,3 @@
-'use strict';
-
 import { mainTextHandler } from '../handlers/main-text.js';
 
 document

@@ -1,5 +1,3 @@
-'use strict';
-
 import { play, clearModal, restartGame } from './handlers.js';
 
 document

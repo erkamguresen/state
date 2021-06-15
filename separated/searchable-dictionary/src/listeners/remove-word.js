@@ -1,5 +1,3 @@
-'use strict';
-
 import { removeHandler } from '../handlers/remove-word.js';
 
 // attach handler to UI with event listener

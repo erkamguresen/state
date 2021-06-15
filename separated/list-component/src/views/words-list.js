@@ -1,5 +1,3 @@
-'use strict';
-
 export const wordsList = (array = []) => {
   const ul = document.createElement('ul');
   for (let string of array) {

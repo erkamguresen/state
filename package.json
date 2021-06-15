@@ -7,6 +7,9 @@
     "type": "git",
     "url": "git+https://github.com/HackYourFutureBelgium/state.git"
   },
+  "scripts": {
+    "test": "node --experimental-vm-modules node_modules/.bin/jest"
+  },
   "author": "HackYourFutureBelgium",
   "license": "MIT",
   "bugs": {
@@ -14,10 +17,10 @@
   },
   "homepage": "https://github.com/HackYourFutureBelgium/state#readme",
   "devDependencies": {
-    "chai": "^3.5.0",
-    "mocha": "^8.2.1"
+    "jest": "^27.0.4"
   },
-  "dependencies": {
-    "jsdom": "^16.4.0"
+  "jest": {
+    "verbose": true,
+    "testEnvironment": "jsdom"
   }
 }

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title></title>
+
+    <link href="./styles.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <script type="module">
+      import { appendComponent } from '../../../lib/append-component.js';
+
+      import { renderLink } from './render-link.js';
+
+      appendComponent(
+        renderLink(
+          'HYF Belgium',
+          'https://www.youtube.com/watch?v=oHg5SJYRHA0'
+        ),
+        'test 1'
+      );
+
+      appendComponent(
+        renderLink(
+          'lmgtfy',
+          'https://lmgtfy.com/?q=let+me+google+that+for+you&s=d'
+        ),
+        'test 2'
+      );
+
+      appendComponent(
+        renderLink(
+          'toaster',
+          'https://archive.org/details/TheBraveLittleToasterPAL'
+        ),
+        'test 3'
+      );
+
+      appendComponent(
+        renderLink('badgers', 'https://badgerbadgerbadger.com/', '_self'),
+        'test 4'
+      );
+    </script>
+  </body>
+</html>

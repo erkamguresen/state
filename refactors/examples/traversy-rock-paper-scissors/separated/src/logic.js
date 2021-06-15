@@ -1,5 +1,3 @@
-'use strict';
-
 export const getComputerChoice = () => {
   const rand = Math.random();
   if (rand < 0.34) {

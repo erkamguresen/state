@@ -1,5 +1,3 @@
-'use strict';
-
 import { componentState } from '../data.js';
 
 // render initial uiElement

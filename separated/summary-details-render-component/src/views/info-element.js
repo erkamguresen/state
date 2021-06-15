@@ -1,5 +1,3 @@
-'use strict';
-
 import { preventDefault } from '../handlers/prevent-default.js';
 
 export const infoElement = ({ summaryText, mainText, isOpen }) => {

@@ -1,5 +1,3 @@
-'use strict';
-
 import jsdom from 'jsdom';
 import chai from 'chai';
 import { infoElement } from './info-element.js';

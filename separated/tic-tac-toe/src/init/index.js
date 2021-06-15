@@ -1,6 +1,5 @@
 // this file is the program's Entry Point
 
-'use strict';
 debugger;
 
 // log initial state

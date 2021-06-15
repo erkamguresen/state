@@ -1,5 +1,3 @@
-'use strict';
-
 import { openCloseHandler } from '../handlers/open-close.js';
 
 document

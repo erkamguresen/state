@@ -1,6 +1,4 @@
-'use strict';
-
-import { logger } from '../../../../lib/logger.js';
+import { logger } from '../../../lib/logger.js';
 
 import { average } from '../logic/average.js';
 import { measurements } from '../data.js';

@@ -101,7 +101,7 @@ _State_, _Log_ and _Render_ are not words that come from JS or Web Development. 
 - **Render**
   - The term comes from the Computer Graphics.
   - Rendering simply means drawing something on the computer screen.
-  - Rendering can also mean making something visual or preparing a view for your data.
+  - Rendering can also mean making something visual or preparing a component for your data.
 
 ### Programming Skills
 
@@ -135,22 +135,13 @@ _State_, _Log_ and _Render_ are not words that come from JS or Web Development. 
 
 ## About the Projects
 
-In the previous module you learned to decompose & plan projects, organize your code, and use HTML/CSS/JS to implement simple websites that process user input. All well and good but there was something missing. Your projects never "remembered" anything.
+In the previous module you learned to decompose & plan projects, organize your code, and use HTML/CSS/JS to implement simple websites that process user input. That's nice but it misses the big picture.
 
-Enter: **State**. This is a fancy programming term to talk about the _data_ stored by your web pages. Nearly every app you use has state -> message histories, images, profile details, weather reports, ... you name it! Data is the core of any application. Just like you learned to write tests to describe your functions and show that they do what they should, you will learn how to use schemas and validation to prove that your program data in fact what you say it is.
+Enter: **State**. This is a fancy programming term to talk about the data stored by your web pages. Nearly every app you use has state -> message histories, images, profile details, weather reports, ... you name it! Data is the core of any application. Just like you learned to write tests to describe your functions and show that they do what they should.
 
-Your new projects will be more interesting, but they will also be a more complicated. The logic will be more challenging, and the data saved in your page will change over time leading to bugs you could never have imagined.
+A good way to understand applications is to think of their _data_ and the _interactions_ a user can have with that data. You will explore the connection between state, UI and UX by learning to write **Components**. Components are functions that return parts of your UI by rendering _state_ into something the user can see and interact with.
 
-To help you understand and debug your projects you will learn about **logging** - this is a technique where you store a record of every user interaction, all user input, and each _state change_. It will take some time before you're comfortable logging your projects. Once you are familiar with this technique you will find that it is helpful way to simplify and understand what is happening in your program.
-
-<details>
-<summary>project diagram</summary>
-<br>
-
-[![project architecture](./state-project-architecture.svg)](https://excalidraw.com/#json=6555846108512256,LRCbA630IGfK6OaqUNwUjw)
-
-</details>
-<br>
+In this module's projects you will want to focus on the data in your web page, how users can interact with it, how it changes over time, and how it is rendered to the UI.
 
 [TOP](#state)
 
@@ -168,13 +159,12 @@ Helpful links, examples and exercises.
 
 - [What is state and why should we care about it?](https://dev.to/codeartistryio/what-is-state-and-why-should-we-care-about-it-4o95)
 - Code in this Repo
-  - 🥚 [stepped](./stepped?--defaults) (examples): single-file projects that have been built one step at a time
-  - 🥚 [fill-in-the-blanks](./fill-in-the-blanks?--defaults) (exercises): single-file projects with some code to complete
-  - 🥚 [refactors](./refactors?--defaults) (exercises): practice refactoring code from a single JS file to separated JS files
-  - 🐣 [separated](./separated?--defaults) (examples): projects to study that are separated into many folders and files.
-  - 🐣 [rendering-data](./rendering-data?--defaults) (exercises): write functions that turn JS data into DOM elements, practice inspecting elements in the DOM and debugger to check your work.
-  - 🐥 [views-that-listen](./views-that-listen?--defaults) (examples): adding event listeners inside your view functions will help you make more interesting and reactive UIs
-  - 🐥 [testing-views](./testing-views?--defaults) (exercises): learn how to read and pass tests for view functions(tests in this directory must be run in Node.js, they will not work in the browser)
+  - 🥚 [function-roles](./function-roles): Learn about **components**, functions that _render_ data into DOM elements
+  - 🥚 [stepped](./stepped) (examples): single-file projects that have been built one step at a time
+  - 🥚 [refactors](./refactors) (examples): study refactored code from a single JS file to separated JS projects
+  - 🐣 [separated](./separated) (examples): projects to study that are separated into many folders and files.
+  - 🐣 [rendering-data](./rendering-data) (exercises): write functions that turn JS data into DOM elements, practice inspecting elements in the DOM and debugger to check your work.
+  - 🐥 [testing-components](./testing-components) (exercises): learn how to read and pass tests for component functions(tests in this directory must be run in Node.js, they will not work in the browser)
 - More Practice
   - [javascript-toy\_\_dom-exercises](https://github.com/omahacodeschool/javascript-toy__dom-exercises)
   - [practice-and-learn-the-dom](https://github.com/tutsplus/practice-javascript-and-learn-the-dom)
@@ -194,6 +184,7 @@ Helpful links, examples and exercises.
 - Nodes vs. Elements
   - [Web Tunings](https://www.youtube.com/watch?v=FrX1bzWc8O4)
   - [StackOverflow](https://stackoverflow.com/questions/9979172/difference-between-node-object-and-element-object)
+- [What is Logging?](https://www.bmc.com/blogs/monitoring-logging-tracing/)
 
 ### Project Scoping
 
@@ -216,9 +207,8 @@ Helpful links, examples and exercises.
 
 ## Week 1
 
-The focus of week 1 is storing important data in an object called _state_, and logging all user interactions with this data.
-
-You will start a two-week group project to build a JavaScript quiz app. We give you starter code, you do the rest :)
+- Learn to plan applications around specific data
+- Learn to render your application's data into a user interface
 
 <details>
 <summary>expand/collapse</summary>
@@ -227,49 +217,34 @@ You will start a two-week group project to build a JavaScript quiz app. We give 
 ### Before Class
 
 - [What is state and why should we care about it?](https://dev.to/codeartistryio/what-is-state-and-why-should-we-care-about-it-4o95)
-- [What is Logging?](https://www.bmc.com/blogs/monitoring-logging-tracing/)
-- [stepped](./stepped?--defaults): take a look through these incremental example projects
+- [stepped](./stepped): take a look through these incremental example projects
 
 ### During Class
 
 #### Before Break
 
-Study the [separated](./separated?--defaults) examples together:
+[./function-roles](./function-roles)
+
+- What is a component function?
+- How can they be tested?
+
+#### After Break
+
+Study the [separated](./separated) examples together:
 
 - What can a user do with this program?
 - What is the program's data?
 - How does each user story interact with the data?
 - Do the logs help you understand the program?
 
-#### After Break
-
-Break into groups and begin planning your quiz project!
-
 ### Project
 
 > after class
 
-This week's project is to write a JS Quiz. You'll be given [starter code](https://github.com/HackYourFutureBelgium/js-quiz-starter) with:
+Continue working on the project your group began last module. This week you should:
 
-- a suggested initial state for your quiz
-- a logging tool
-- testing support for `/logic` and `/views`
-- CI for testing & documentation when opening PRs to `master` or `main`
-- an example project in the repo (go ahead and delete the code when you start your project)
-
-The rest is up to you! Just be careful when _scoping_ your project, it's better have a simple working quiz than a complicated broken one.
-
-#### Checklist
-
-```md
-- [ ] [repo](https://github.com/_/_) with a complete README
-- [ ] [live demo](https://_.github.io/_)
-- [ ] [project-planning](_https://github.com/_/_/tree/master/project-planning)
-- [ ] [A project board](https://github.com/_/_/projects/X)
-- [ ] [One issue per task](https://github.com/_/_/issues) (with labels and milestones)
-- [ ] [One branch per issue](https://github.com/_/_/network)
-- [ ] [One reviewed PR per completed issue](https://github.com/_/__/pulls?q=is%3Apr+is%3Aclosed)
-```
+- refactor all of your data into a single `state` object
+- refactor your app to include at least one _component_
 
 </details>
 <br>
@@ -280,10 +255,6 @@ The rest is up to you! Just be careful when _scoping_ your project, it's better 
 
 ## Week 2
 
-The focus of week 2 is completing your group project: in class we will review your progress all together, after class you will complete the JS quiz project.
-
-Remember, completing the project can also mean removing features that you don't have time to build/fix! It's more impressive to have a simple working website than a big broken one.
-
 <details>
 <summary>expand/collapse</summary>
 <br>
@@ -292,34 +263,15 @@ Remember, completing the project can also mean removing features that you don't 
 
 > before class
 
-Prepare at least one difficulty your team had last week that you would like to discuss. Open a new issue in your class repo describing what your team struggled with, be sure to:
-
-- describe the challenge your team faced
-- link to your project repo
-- use the milestone `state`
-- label it `help-wanted` and `week-2`
-- assign your group members
-
 ### During Class
 
 #### Before Break
 
-We will read through all the issues posted by your class then pick one or two to solve as a class. Someone from the selected team(s) will share their screen and we'll resolve the issue all together.
-
 #### After Break
-
-Break into small groups and make a plan for the next week:
-
-- what went well last week? what was challenging?
-- what features should you put aside to finish on time?
-- what can you do better this week?
-- take some time to update your issues, labels, and project board
 
 ### After Class
 
 > after class
-
-Finish up the JS Quiz from last week.
 
 </details>
 <br>
@@ -369,6 +321,5 @@ Screen recordings of class. Coaches, when sending your PR's with links please ..
 - Week 2:
   - [Part 1](https://vimeo.com/495147137)
   - [Part 2](https://vimeo.com/495162820/a3a9aab641)
-  
 
 [TOP](#state)

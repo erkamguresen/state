@@ -1,0 +1,9 @@
+{
+  "--defaults": {
+    ".html": "study"
+  },
+  "study": {
+    "environment": true,
+    "type": "module"
+  }
+}

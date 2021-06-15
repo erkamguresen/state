@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title></title>
+
+    <link href="./styles.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <script type="module">
+      import { appendComponent } from '../../../lib/append-component.js';
+
+      import { renderHeader } from './render-header.js';
+
+      appendComponent(renderHeader(1, 'hello'), 'test 1');
+
+      appendComponent(renderHeader(2, 'JavaScript'), 'test 2');
+
+      appendComponent(renderHeader(3, 'toaster'), 'test 3');
+
+      appendComponent(renderHeader(4, 'badgerbadgerbadger'), 'test 4');
+
+      appendComponent(renderHeader(5, 'perfume'), 'test 5');
+
+      appendComponent(renderHeader(6, 'falafel'), 'test 6');
+    </script>
+  </body>
+</html>

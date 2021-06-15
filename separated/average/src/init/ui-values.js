@@ -1,5 +1,3 @@
-'use strict';
-
 import { measurements } from '../data.js';
 
 // render initial UI using measurements measurements

@@ -1,5 +1,3 @@
-'use strict';
-
 import { queryHandler } from '../handlers/query-words.js';
 
 // attach handler to UI with event listener

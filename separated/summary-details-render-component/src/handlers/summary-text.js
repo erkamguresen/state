@@ -1,6 +1,4 @@
-'use strict';
-
-import { logger } from '../../../../lib/logger.js';
+import { logger } from '../../../lib/logger.js';
 
 import { componentState } from '../data.js';
 import { infoElement } from '../views/info-element.js';

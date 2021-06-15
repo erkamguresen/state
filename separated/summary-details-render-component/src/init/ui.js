@@ -1,5 +1,3 @@
-'use strict';
-
 import { componentState } from '../data.js';
 import { infoElement } from '../views/info-element.js';
 

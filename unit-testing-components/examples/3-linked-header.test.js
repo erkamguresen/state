@@ -1,7 +1,5 @@
 'use strict';
 
-const expect = require('chai').expect;
-
 /**
  * renders a header with a link
  *  you can optionally configure the target
@@ -23,71 +21,72 @@ const linkedHeader = (text, link, target = '_blank') => {
   return h2El;
 };
 
-
 describe('linkedHeader: renders an anchor inside a heading', () => {
-
   describe('a header linked to google', () => {
     const actual = linkedHeader('google it', 'https://www.google.com/');
 
     it('has tagName: "H2"', () => {
-      expect(actual).to.have.property('tagName', 'H2');
+      expect(actual.tagName).toEqual('H2');
     });
     it('has childElementCount: 1', () => {
-      expect(actual).to.have.property('childElementCount', 1);
+      expect(actual.childElementCount).toEqual(1);
     });
     console.dir(actual);
 
     describe(`first child`, () => {
       const actualChild = actual.children[0];
       it('has tagName: "A"', () => {
-        expect(actualChild).to.have.property('tagName', 'A');
+        expect(actualChild.tagName).toEqual('A');
       });
       it('has href: "https://www.google.com/"', () => {
-        expect(actualChild).to.have.property('href', 'https://www.google.com/');
+        expect(actualChild.href).toEqual('https://www.google.com/');
       });
       it('has target: "_blank" (default)', () => {
-        expect(actualChild).to.have.property('target', '_blank');
+        expect(actualChild.target).toEqual('_blank');
       });
       it('has innerHTML: "google it"', () => {
-        expect(actualChild.innerHTML).to.equal('google it');
+        expect(actualChild.innerHTML).toEqual('google it');
       });
       it('has childElementCount: 0', () => {
-        expect(actualChild).to.have.property('childElementCount', 0);
+        expect(actualChild.childElementCount).toEqual(0);
       });
       console.dir(actualChild);
     });
   });
 
   describe('a header linked to badgers', () => {
-    const actual = linkedHeader('badger x 3', 'https://badgerbadgerbadger.com/', '_self');
+    const actual = linkedHeader(
+      'badger x 3',
+      'https://badgerbadgerbadger.com/',
+      '_self'
+    );
 
     it('has tagName: "H2"', () => {
-      expect(actual).to.have.property('tagName', 'H2');
+      expect(actual.tagName).toEqual('H2');
     });
     it('has childElementCount: 1', () => {
-      expect(actual).to.have.property('childElementCount', 1);
+      expect(actual.childElementCount).toEqual(1);
     });
     console.dir(actual);
 
     describe(`first child`, () => {
       const actualChild = actual.children[0];
       it('has tagName: "A"', () => {
-        expect(actualChild).to.have.property('tagName', 'A');
+        expect(actualChild.tagName).toEqual('A');
       });
       it('has href: "hhttps://badgerbadgerbadger.com/"', () => {
-        expect(actualChild).to.have.property('href', 'https://badgerbadgerbadger.com/');
+        expect(actualChild.href).toEqual('https://badgerbadgerbadger.com/');
       });
       it('has target: "_self"', () => {
-        expect(actualChild).to.have.property('target', '_self');
+        expect(actualChild.target).toEqual('_self');
       });
       it('has innerHTML: "badger x 3"', () => {
-        expect(actualChild.innerHTML).to.equal('badger x 3');
+        expect(actualChild.innerHTML).toEqual('badger x 3');
       });
       it('has childElementCount: 0', () => {
-        expect(actualChild).to.have.property('childElementCount', 0);
+        expect(actualChild.childElementCount).toEqual(0);
       });
       console.dir(actualChild);
     });
   });
-
 });

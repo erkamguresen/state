@@ -1,5 +1,3 @@
-'use strict';
-
 import { incrementCurrent } from '../handlers/increment-current.js';
 
 document.getElementById('up').addEventListener('click', incrementCurrent);

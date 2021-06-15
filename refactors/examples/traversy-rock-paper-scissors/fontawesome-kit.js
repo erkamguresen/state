@@ -16,7 +16,6 @@ window.FontAwesomeKitConfig = {
 !(function(t) {
   'function' == typeof define && define.amd ? define(t) : t();
 })(function() {
-  'use strict';
   function t(e) {
     return (t =
       'function' == typeof Symbol && 'symbol' == typeof Symbol.iterator

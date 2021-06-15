@@ -1,9 +1,7 @@
-'use strict';
-
 import { scoreboard } from './data.js';
 
 import { getComputerChoice, getWinner } from './logic.js';
-import { renderModalBody, renderScore } from './views.js';
+import { renderModalBody, renderScore } from './components.js';
 
 export const play = e => {
   // read user input
@@ -33,14 +31,7 @@ export const play = e => {
   document.getElementById('restart').style.display = 'inline-block';
 
   // log interaction
-  console.log(
-    'play:',
-    playerChoice,
-    computerChoice,
-    winner,
-    { ...scoreboard },
-    e
-  );
+  console.log('play:', playerChoice, computerChoice);
 };
 
 export const restartGame = () => {
