@@ -207,7 +207,7 @@ Helpful links, examples and exercises.
 
 ## Week 1
 
-- Learn to plan applications around specific data
+- Learn to plan applications around your data
 - Learn to render your application's data into a user interface
 
 <details>
@@ -223,19 +223,41 @@ Helpful links, examples and exercises.
 
 #### Before Break
 
-[./function-roles](./function-roles)
+_All Together_:
 
-- What is a component function?
-- How can they be tested?
+- What is State? Why is it important?
+  - Applications are data + user interactions
+  - User stories tell how a user can interact with the data
+- [./function-roles](./function-roles)
+  - Components _render_ state for the user
+  - What is a component function?
+  - How can they be tested?
+
+_In Small Groups_:
+
+- Study the [separated](./separated) examples together:
+  - What can a user do with this program?
+  - What is the program's data?
+  - How does each user interaction use state?
+  - Do the logs help understand the program?
 
 #### After Break
 
-Study the [separated](./separated) examples together:
+Planning with State and Components:
 
-- What can a user do with this program?
-- What is the program's data?
-- How does each user story interact with the data?
-- Do the logs help you understand the program?
+1. User stories
+   - What can a user do with your application?
+2. Program data
+   - What data do you need for these use cases?
+3. Wireframe
+   - How is the data represented in the UI?
+4. Component Tree
+   - What are the relationships between components, which components are used inside other components?
+   - _Presentational Components_: Components that display data but don't do anything (no event listeners). In a todo list, this might be the component that shows a checkbox or the text.
+   - _Container Components_: Components for layout and interactivity. In a todo list, this might be a component that contains all the _presentational_ list items. This component will have layout styling and a bubbling event listener.
+5. Build and test the components (outside of the main app!)
+   - Start by developing the components at the bottom of the tree
+   - Work your way up.
 
 ### Project
 
