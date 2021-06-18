@@ -1,6 +1,7 @@
 /**
  * renders an anchor element with given text & URL
  *  you can optionally configure the target
+ *
  * @param {string} text - the link text
  * @param {string} url - the link's URL
  * @param {string} [target='_blank'] - where to open the link

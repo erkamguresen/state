@@ -1,15 +1,15 @@
-import jsdom from 'jsdom';
-import chai from 'chai';
+// import jsdom from 'jsdom';
+// import chai from 'chai';
 import { infoElement } from './info-element.js';
 
-// build the DOM properties we will use in testing
-const { document, Element, Event } = new jsdom.JSDOM('').window;
-// create a global variable named `document` that behaves just like in the browser
-// you view function will not work without this
-global.document = document;
+// // build the DOM properties we will use in testing
+// const { document, Element, Event } = new jsdom.JSDOM('').window;
+// // create a global variable named `document` that behaves just like in the browser
+// // you view function will not work without this
+// global.document = document;
 
-// declare the `expect` variable for testing
-const expect = chai.expect;
+// // declare the `expect` variable for testing
+// const expect = chai.expect;
 
 describe('infoElement renders a summary/details element with a P tag.  it can be open or closed', () => {
   describe('an open element with "h" and "ello!"', () => {
@@ -19,45 +19,45 @@ describe('infoElement renders a summary/details element with a P tag.  it can be
       isOpen: true,
     });
     it('should be a DOM element', () => {
-      expect(renderedElement).to.be.instanceOf(Element);
+      expect(renderedElement).toBeInstanceOf(Element);
     });
     it('should have nodeName "DETAILS"', () => {
-      expect(renderedElement.nodeName).to.equal('DETAILS');
+      expect(renderedElement.nodeName).toBe('DETAILS');
     });
     it('should be open', () => {
-      expect(renderedElement.open).to.equal(true);
+      expect(renderedElement.open).toBe(true);
     });
     it('should have 2 children', () => {
-      expect(renderedElement.childElementCount).to.equal(2);
+      expect(renderedElement.childElementCount).toBe(2);
     });
     describe('the first child should be a SUMMARY element with "h"', () => {
       const firstChild = renderedElement.children[0];
       it('should be a DOM element', () => {
-        expect(firstChild).to.be.instanceOf(Element);
+        expect(firstChild).toBeInstanceOf(Element);
       });
       it('should have nodeName "SUMMARY"', () => {
-        expect(firstChild.nodeName).to.equal('SUMMARY');
+        expect(firstChild.nodeName).toBe('SUMMARY');
       });
       it('should have no children', () => {
-        expect(firstChild.childElementCount).to.equal(0);
+        expect(firstChild.childElementCount).toBe(0);
       });
       it('should have innerHTML "h"', () => {
-        expect(firstChild.innerHTML).to.equal('h');
+        expect(firstChild.innerHTML).toBe('h');
       });
     });
     describe('the second child should be a P element with "ello!"', () => {
       const secondChild = renderedElement.children[1];
       it('should be a DOM element', () => {
-        expect(secondChild).to.be.instanceOf(Element);
+        expect(secondChild).toBeInstanceOf(Element);
       });
       it('should have nodeName "P"', () => {
-        expect(secondChild.nodeName).to.equal('P');
+        expect(secondChild.nodeName).toBe('P');
       });
       it('should have no children', () => {
-        expect(secondChild.childElementCount).to.equal(0);
+        expect(secondChild.childElementCount).toBe(0);
       });
       it('should have innerHTML "ello!"', () => {
-        expect(secondChild.innerHTML).to.equal('ello!');
+        expect(secondChild.innerHTML).toBe('ello!');
       });
     });
     describe('default "click" event behavior should be prevented', () => {
@@ -68,7 +68,7 @@ describe('infoElement renders a summary/details element with a P tag.  it can be
       };
       renderedElement.dispatchEvent(eventSpy);
       it('should have prevented the default', () => {
-        expect(defaultWasPrevented).to.equal(true);
+        expect(defaultWasPrevented).toBe(true);
       });
     });
   });
@@ -79,45 +79,45 @@ describe('infoElement renders a summary/details element with a P tag.  it can be
       isOpen: false,
     });
     it('should be a DOM element', () => {
-      expect(renderedElement).to.be.instanceOf(Element);
+      expect(renderedElement).toBeInstanceOf(Element);
     });
     it('should have nodeName "DETAILS"', () => {
-      expect(renderedElement.nodeName).to.equal('DETAILS');
+      expect(renderedElement.nodeName).toBe('DETAILS');
     });
     it('should be closed', () => {
-      expect(renderedElement.open).to.equal(false);
+      expect(renderedElement.open).toBe(false);
     });
     it('should have 2 children', () => {
-      expect(renderedElement.childElementCount).to.equal(2);
+      expect(renderedElement.childElementCount).toBe(2);
     });
     describe('the first child should be a SUMMARY element with "b"', () => {
       const firstChild = renderedElement.children[0];
       it('should be a DOM element', () => {
-        expect(firstChild).to.be.instanceOf(Element);
+        expect(firstChild).toBeInstanceOf(Element);
       });
       it('should have nodeName "SUMMARY"', () => {
-        expect(firstChild.nodeName).to.equal('SUMMARY');
+        expect(firstChild.nodeName).toBe('SUMMARY');
       });
       it('should have no children', () => {
-        expect(firstChild.childElementCount).to.equal(0);
+        expect(firstChild.childElementCount).toBe(0);
       });
       it('should have innerHTML "b"', () => {
-        expect(firstChild.innerHTML).to.equal('b');
+        expect(firstChild.innerHTML).toBe('b');
       });
     });
     describe('the second child should be a P element with "ye."', () => {
       const secondChild = renderedElement.children[1];
       it('should be a DOM element', () => {
-        expect(secondChild).to.be.instanceOf(Element);
+        expect(secondChild).toBeInstanceOf(Element);
       });
       it('should have nodeName "P"', () => {
-        expect(secondChild.nodeName).to.equal('P');
+        expect(secondChild.nodeName).toBe('P');
       });
       it('should have no children', () => {
-        expect(secondChild.childElementCount).to.equal(0);
+        expect(secondChild.childElementCount).toBe(0);
       });
       it('should have innerHTML "ye."', () => {
-        expect(secondChild.innerHTML).to.equal('ye.');
+        expect(secondChild.innerHTML).toBe('ye.');
       });
     });
     describe('default "click" event behavior should be prevented', () => {
@@ -128,7 +128,7 @@ describe('infoElement renders a summary/details element with a P tag.  it can be
       };
       renderedElement.dispatchEvent(eventSpy);
       it('should have prevented the default', () => {
-        expect(defaultWasPrevented).to.equal(true);
+        expect(defaultWasPrevented).toBe(true);
       });
     });
   });

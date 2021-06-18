@@ -1,7 +1,7 @@
 import { logger } from '../../../lib/logger.js';
 
 import { words } from '../data.js';
-import { wordsList } from '../views/words-list.js';
+import { wordsList } from '../components/words-list.js';
 
 export const addHandler = () => {
   debugger;
