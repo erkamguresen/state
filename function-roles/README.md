@@ -23,3 +23,12 @@ Even components can have different roles! You'll learn more about this in the fo
 
 - _presentational_: Components that display data in a friendly way. These are generally pure functions: data in -> element out. The DOM elements they render are usually not interactive
 - _container_: Components that define how the web page works. These will often use _state_, _handlers_ and _presentational components_ to add interactivity to a web page.
+
+### Testing Components
+
+One huge benefit of developing your application with components is that you can test each part of the UI in isolation before integrating them into your website. For now you will learn to test your components in two different ways:
+
+- **_Structure_**: Does your rendered component have the correct DOM structure? The right number of children, the right `.className`, the right `.tagName`, ... all with unit tests exactly like you learned for logic functions. You will use a file called `component-name.spec.js` to write your component unit tests.
+- **_Behavior_**: Does your component do the right thing when rendered into a web page? Does it react to the user in the correct way? Does it look right when it's rendered with it's styles into a web page? You will test your component's _behavior_ by rendering it into an HTML document with different arguments and using/inspecting it to make sure it works correctly. You will do this in a file called `component-name.test.html`.
+
+Check out [./isolate-components/color-changer](./isolate-components/color-changer) to see this in action.
