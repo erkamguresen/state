@@ -8,8 +8,3 @@ export const handleMouseMove = event => {
   const y = event.clientY;
   event.target.style.backgroundColor = `rgb(${x},${y},100)`;
 };
-
-/*
-
-
-*/
