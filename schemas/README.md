@@ -13,7 +13,7 @@ It's important to make a very clear difference between the data in your applicat
 - boolean
 - null
 
-Notice functions aren't in this list! You data should _do_ anything. It should just be some stored information. Your application does things _to_ the data.
+Notice functions aren't in this list! You data should not _do_ anything. It should just be some stored information. Your application does things _to_ the data.
 
 For now your data will be written as JavaScript, but following these type limitations will prepare you to work with JSON later on.
 
