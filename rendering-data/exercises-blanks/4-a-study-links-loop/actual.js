@@ -1,6 +1,6 @@
 'use strict';
 
-const actual = inksData => {
+const actual = linksData => {
   const divEl = document.createElement('_');
 
   const h3El = document.createElement('_');

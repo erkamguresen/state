@@ -15,7 +15,7 @@ const actual = virtualElement => {
       el.textContent += _;
     } else {
       // recursively render child elements
-      const renderedChild = solution(_);
+      const renderedChild = actual(_);
       el.appendChild(_);
     }
   }
