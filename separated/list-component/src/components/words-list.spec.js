@@ -1,4 +1,10 @@
 import { wordsList } from './words-list.js';
+import { jsdom } from 'jsdom';
+import { chai } from 'chai';
+
+const { document, Element } = new jsdom.JSDOM('').window;
+global.document = document;
+const expect = chai.expect;
 
 describe('wordsList renders an array of strings into an unordered list', () => {
   describe('an empty array becomes an empty list', () => {

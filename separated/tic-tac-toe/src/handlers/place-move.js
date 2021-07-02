@@ -2,8 +2,9 @@ import { logger } from '../../../lib/logger.js';
 
 import { game } from '../data.js';
 import { determineWinner } from '../logic/determine-winner.js';
+import { resetGame } from '../handlers/reset-game.js';
 
-export const placeMove = event => {
+export const placeMove = (event) => {
   debugger;
   // read & process user input
   const index = event.target.id;
@@ -30,12 +31,6 @@ export const placeMove = event => {
   // update UI using state
   event.target.innerHTML = game.board[index];
 
-  // // a challenge, make this game detect if there is a winner
-  // const winner = determineWinner(board);
-  // if (winner !== null) {
-  //
-  // }
-
   // log action
   logger.add({
     handler: 'place move',
@@ -44,4 +39,10 @@ export const placeMove = event => {
     index,
     game,
   });
+  // // a challenge, make this game detect if there is a winner
+  const winner = determineWinner(game.board);
+  if (winner !== null) {
+    alert(`${winner} wins !!!`);
+    resetGame();
+  }
 };

@@ -22,5 +22,8 @@
   "jest": {
     "verbose": true,
     "testEnvironment": "jsdom"
+  },
+  "dependencies": {
+    "mocha": "^9.0.1"
   }
 }
