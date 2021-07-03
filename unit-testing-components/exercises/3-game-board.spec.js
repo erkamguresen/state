@@ -50,7 +50,7 @@ function testGameBoard(actual, boardData) {
       const row = boardData[i];
       const actualChild = actual.children[i];
       it('has tagName: "TR"', () => {
-        expect(actualChild).toEqual('tagName', 'TR');
+        expect(actualChild.tagName).toEqual('TR');
       });
       it(`has childElementCount: ${row.length}`, () => {
         expect(actualChild.childElementCount).toEqual(row.length);

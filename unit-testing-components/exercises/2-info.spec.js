@@ -102,7 +102,7 @@ describe('renderInfo: renders some info under a caption', () => {
       expect(actual.tagName).toEqual('DETAILS');
     });
     it('has id: "js"', () => {
-      expect(actual).toEqual('id', 'js');
+      expect(actual.id).toEqual('js');
     });
     it('has childElementCount: 2', () => {
       expect(actual.childElementCount).toEqual(2);
