@@ -6,5 +6,15 @@
  * @returns {HTMLParagraphElement} a rendered paragraph element
  */
 export const renderParagraph = (text, classList = []) => {
-  // see the last example for a hint
+  const paragraphElement = document.createElement('p');
+
+  paragraphElement.appendChild(document.createTextNode(text));
+  // paragraphElement.innerHtml = text;
+  // paragraphElement.innerText = text;
+  
+  paragraphElement.className = classList.join(' '); 
+
+  console.log(paragraphElement.innerHTML , 
+    paragraphElement.innerText);
+  return paragraphElement;
 };

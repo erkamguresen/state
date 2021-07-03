@@ -15,7 +15,8 @@ export const renderListReduce = (arr, startNum) => {
     list.appendChild(nextLi);
     return list;
   };
-  const olEl = arr.map(renderLi).reduce(appendLi, document.createElement('ol'));
+  const olEl = arr.map(renderLi)
+    .reduce(appendLi, document.createElement('ol'));
 
   olEl.start = startNum;
 
